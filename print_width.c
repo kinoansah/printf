@@ -1,10 +1,3 @@
-/*
- * Task: Field width for non-custom conversion specifiers
- * Printf Project Partners: Kingsley Owusu Ansah
- *                          Samuel Atiemo
- */
-
-
 #include "main.h"
 
 /**
