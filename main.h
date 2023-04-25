@@ -140,7 +140,7 @@ int flags, int width, int precision, int size);
 
 
 
-/* Funciotins to handle other specifiers */
+/* Funciotions to handle other specifiers */
 
 int get_flags(const char *format, int *i);
 
