@@ -9,7 +9,7 @@
 
 #define UNUSED(x) (void)(x)
 
-#define OUTPUT_BUFF_SIZE 1024
+#define BUFF_SIZE 1024
 
 
 
