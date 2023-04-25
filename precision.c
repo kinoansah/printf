@@ -22,13 +22,21 @@ int get_precision(const char *format, int *i, va_list list)
 	{
 		if (is_digit(format[curr_i]))
 		{
-			precision *= 10;
-			precision += format[curr_i] - '0';
+			precision = (precision + format[curr_i] - '0') * 10;
 		}
-		else if (format[curr_i] == '*')
+		else if (format[curr_i] == 'x')
 		{
 			curr_i++;
-			precision = va_arg(list, int);
+			int hex_precision = 0;
+			for (; isxdigit(format[curr_i]; curr_i++)
+			     {
+				     hex_precision *= 16;
+				     if (isdigit(format[curr_i]))
+					     hex_precision += format[curr_i] - '0';
+				     else
+					     hex_precision += tolower(format[curr_i] - 'a' + 10;
+			     }
+			precision = hex_precision;
 			break;
 		}
 		else
