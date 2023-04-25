@@ -10,35 +10,36 @@
  */
 int get_precision(const char *format, int *i, va_list list)
 {
-	int curr_i = *i + 1;
-	int precision = -1;
-	int hex_precision = 0;
+    int curr_i = *i + 1;
+    int precision = -1;
 
-	/* Check if there is a precision specifier */
-	if (format[curr_i] != '.')
-		return precision;
+    /* Check if there is a precision specifier */
+    if (format[curr_i] != '.')
+        return precision;
 
-	precision = 0;
+    precision = 0;
 
-	for (curr_i += 1; format[curr_i] != '\0'; curr_i++)
-	{
-		if (isdigit(format[curr_i]))
-		{
-			precision *= 10;
-			precision += format[curr_i] - '0';
-		}
-		else if (format[curr_i] == '*')
-		{
-			curr_i++;
-			precision = va_arg(list, int);
-			break;
-		}
-		else
-			break;
-	}
+    /* Parse precision value from format string */
+    for (curr_i += 1; format[curr_i] != '\0'; curr_i++)
+    {
+        if (isdigit(format[curr_i]))
+        {
+            precision *= 10;
+            precision += format[curr_i] - '0';
+        }
+        else if (format[curr_i] == '*')
+        {
+            curr_i++;
+            precision = va_arg(list, int);
+            break;
+        }
+        else
+        {
+            break;
+        }
+    }
 
-	*i = curr_i - 1;
+    *i = curr_i - 1;
 
-	return precision;
+    return precision;
 }
-
