@@ -14,13 +14,14 @@ int _printf(const char *format, ...)
 	va_list args;
 	int printed_chars = 0, buff_ind = 0, flags, width, precision, size;
 	char buffer[BUFF_SIZE];
+	int i;
 
 	if (format == NULL)
 		return (-1);
 
 	va_start(args, format);
 
-	for (int i = 0; format && format[i]; i++)
+	for (i = 0; format && format[i]; i++)
 	{
 		if (format[i] != '%')
 		{
@@ -37,8 +38,9 @@ int _printf(const char *format, ...)
 			precision = get_precision(format, &i, args);
 			size = get_size(format, &i);
 			i++;
-			int printed = handle_print(format, &i, args, buffer,
-						   flags, width, precision, size);
+			int printed;
+			printed = handle_print(format, &i, args, buffer,
+				flags, width, precision, size);
 			if (printed == -1)
 				return (-1);
 			printed_chars += printed;
