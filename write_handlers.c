@@ -2,13 +2,13 @@
 
 /************************* WRITE HANDLE *************************/
 /**
- * handle_write_char - Prints a string
+ * handle_write_char - print a string
  * @c: char types.
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags.
+ * @buffer: buffer array to handle print
+ * @flags:  calculates active flags.
  * @width: get width.
  * @precision: precision specifier
- * @size: Size specifier
+ * @size: size specifier
  *
  * Return: Number of chars printed.
  */
