@@ -74,7 +74,6 @@ va_list list, char buffer[], int flags, int width, int precision, int size);
 
 
 
-/****************** FUNCTIONS ******************/
 
 
 
