@@ -77,7 +77,7 @@ va_list list, char buffer[], int flags, int width, int precision, int size);
 
 
 
-
+/****************** FUNCTIONS ******************/
 
 
 
@@ -131,7 +131,7 @@ char buffer[], int flags, char flag_ch, int width, int precision, int size);
 
 
 
-/* Functions to print non-printable characters */
+/* Function to print non printable characters */
 
 int print_non_printable(va_list types, char buffer[],
 
@@ -139,7 +139,7 @@ int flags, int width, int precision, int size);
 
 
 
-/* Funcions to print memory address */
+/* Funcion to print memory address */
 
 int print_pointer(va_list types, char buffer[],
 
@@ -147,7 +147,7 @@ int flags, int width, int precision, int size);
 
 
 
-/* Funciotions to handle other specifiers */
+/* Funciotns to handle other specifiers */
 
 int get_flags(const char *format, int *i);
 
@@ -159,7 +159,7 @@ int get_size(const char *format, int *i);
 
 
 
-/*Functions to print string in reverse*/
+/*Function to print string in reverse*/
 
 int print_reverse(va_list types, char buffer[],
 
@@ -167,7 +167,7 @@ int flags, int width, int precision, int size);
 
 
 
-/*Functions to print a string in rot 13*/
+/*Function to print a string in rot 13*/
 
 int print_rot13string(va_list types, char buffer[],
 
@@ -219,4 +219,4 @@ long int convert_size_unsgnd(unsigned long int num, int size);
 
 
 
-#endif 
+#endif /* MAIN_H */
