@@ -1,8 +1,11 @@
 #ifndef MAIN_H
+
 #define MAIN_H
 
 #include <stdio.h>
+
 #include <stdarg.h>
+
 #include <unistd.h>
 
 
@@ -74,6 +77,10 @@ va_list list, char buffer[], int flags, int width, int precision, int size);
 
 
 
+
+
+
+
 /* Funtions to print chars and strings */
 
 int print_char(va_list types, char buffer[],
@@ -124,7 +131,7 @@ char buffer[], int flags, char flag_ch, int width, int precision, int size);
 
 
 
-/* Functions to print non printable characters */
+/* Functions to print non-printable characters */
 
 int print_non_printable(va_list types, char buffer[],
 
@@ -132,7 +139,7 @@ int flags, int width, int precision, int size);
 
 
 
-/* Functions to print memory address */
+/* Funcions to print memory address */
 
 int print_pointer(va_list types, char buffer[],
 
@@ -196,7 +203,7 @@ int flags, int width, int precision, int size);
 
 
 
-
+/****************** UTILS ******************/
 
 int is_printable(char);
 
