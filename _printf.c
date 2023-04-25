@@ -1,3 +1,9 @@
+/*
+ * Task: Write a function that produces output according to a format
+ * Printf Project Partners: Kingsley Owusu Ansah
+ *                          Samuel Atiemo
+ */
+
 #include "main.h"
 
 void print_buffer(char buffer[], int *buff_ind);
