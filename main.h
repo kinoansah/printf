@@ -7,9 +7,9 @@
 
 
 
-#define UNUSED(x) (void)(x)
+#define BUFF_FLUSH -1
 
-#define BUFF_SIZE 1024
+#define OUTPUT_BUFF_SIZE 1024
 
 
 
